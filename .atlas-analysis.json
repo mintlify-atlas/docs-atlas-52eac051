@@ -1,0 +1,82 @@
+{
+  "projectType": "saas",
+  "projectName": "Music Tracker",
+  "projectDescription": "Full-stack application for requesting and managing music track metadata from Spotify by ISRC code.",
+  "theme": "palm",
+  "primaryColor": "#1c1414",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "architecture/overview",
+              "architecture/backend",
+              "architecture/frontend",
+              "architecture/database"
+            ]
+          },
+          {
+            "group": "User Guide",
+            "pages": [
+              "guide/authentication",
+              "guide/register-track",
+              "guide/lookup-track"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/local-setup",
+              "deployment/docker",
+              "deployment/configuration"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "REST API",
+            "pages": [
+              "api/overview",
+              "api/authentication",
+              "api/register-track",
+              "api/get-track",
+              "api/get-cover",
+              "api/error-handling"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Register music tracks by ISRC from Spotify",
+    "Store track metadata in PostgreSQL",
+    "Retrieve track information and cover images",
+    "HTTP Basic authentication",
+    "React frontend with Redux state management",
+    "OpenAPI/Swagger documentation",
+    "Docker deployment support",
+    "Hexagonal architecture backend"
+  ],
+  "publicApiSurface": [
+    "POST /api/v1/tracks - Register track by ISRC",
+    "GET /api/v1/tracks/{isrCode} - Get track metadata",
+    "GET /api/v1/tracks/{isrCode}/cover - Get cover image",
+    "GET /actuator/health - Health check endpoint"
+  ]
+}
